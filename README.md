@@ -1,6 +1,11 @@
 # r-podcastindex-generate-reports
 R language script to ingest the podcast index 2.0 database and generate reports.
 
+## What this R script does
+Downloads the full podcast database as a sqlite3 file over IPFS from the link available at https://podcastindex.org/
+
+Then generates descriptive analysis reports about the feeds in the database. On a 4 core 8 GB RAM circa 2012 machine this process takes roughly 4-6 minutes to generate the histogram, and boxplot reports.
+
 # Setup
 1. Install R (from https://cran.r-project.org/)
 1. Install dependencies 
@@ -18,8 +23,3 @@ sudo chmod +x ./generate-podcast-index-reports-from-sqlite3.R
 ```bash
 ./generate-podcast-index-reports-from-sqlite3.R 
 ```
-
-# What this R script does
-Downloads the full podcast database as a sqlite3 file over IPFS from the link available at https://podcastindex.org/
-
-Then generates descriptive analysis reports about the feeds in the database. On a 4 core 8 GB RAM circa 2012 machine this process takes roughly 4-6 minutes to generate the histogram, and boxplot reports.
